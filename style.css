@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    background: url("BG.png") center/cover no-repeat;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("BG.png") center/cover;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+body {
+    justify-content: center;
+    font-family: 'Dancing Script', cursive;
+}
+
+.container {
+    text-align: center;
+}
+
+
+/* TEXT */
+.text h1 {
+    color: #777;
+    margin-top: 24px;
+}
+
+
+
+.text p {
+    color: brown;
+    font-size: 20px;
+}
+
+/* .img1 {
+    animation: blink 6s infinite;
+} */
+
+/* .img2 {
+    animation: blink 4s infinite;
+    animation-delay: 2s;
+} */
+
+/* ANIMATION */
+@keyframes blink {
+    0%   { opacity: 1; }
+    50%  { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.text {
+
+    position: absolute;
+    height: 300px;
+    text-align: center;
+    top: 50%;
+    /* left: 50%; */
+}
+
+.last {
+    animation: blink 6s infinite;
+    position: absolute;
+    color: hotpink;
+    font-size: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 85%;
+}
+
+.bg {
+    position: relative;
+    width: 40%;
+    height: 40%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.img2 {
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    bottom: 0;
+    right: 0;
+}
+
+.img1 {
+
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.pulse {
+    display: inline-block;
+    color: crimson;
+    text-decoration: none;
+    font-size: 18px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
